@@ -68,6 +68,23 @@ async function start () {
 			++screenShotCounter;
 			await page.close();
 		}
+
+		if (createScreenshots) {
+			for (let i = 0, l = locales.length; i < l; i++) {
+				const page = await browser.newPage();
+				await page.setUserAgent('Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko'); // IE11
+				await page.setViewport(VIEWPORT);
+				const address = new URL('/', origin);
+					  address.searchParams.set('locale', locales[i]);
+				await page.goto(address, { waitUntil: 'load', timeout: 0 });
+				await page.screenshot({
+					path: path.join(snapshotsPath, locales[i], 'outdatedBrowser_' + locales[i] + '.png'),
+					fullPage: true
+				});
+				await page.close();
+			}
+		}
+
 		fs.writeFileSync(path.join(snapshotsPath, filename), JSON.stringify(snapshotObject));
 		await browser.close();
 	} catch (err) {
