@@ -31,8 +31,23 @@
   <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
+  <style>
+    /* https://web.dev/bypass/ */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000000;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+    .skip-link:focus {top: 0;}
+  </style>
 </head>
   <body>
+    <!-- https://web.dev/bypass/ -->
+    <a class="skip-link" href="#root">Skip to main</a>
     <div id="root"></div>
   </body>
 </html>
