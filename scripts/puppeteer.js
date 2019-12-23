@@ -44,7 +44,7 @@ async function start () {
 		});
 		let screenShotCounter = 1;
 		while (urls.length) {
-			const url = urls.pop();
+			const url = urls.shift();
 			const address = new URL(url, origin);
 			if (!snapshotObject[url]) snapshotObject[url] = {};
 			const page = await browser.newPage();
