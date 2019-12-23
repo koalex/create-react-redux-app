@@ -1,0 +1,11 @@
+{
+  "core.404.NotFound": "Ресурс не найден",
+  "core.404.GoHome": "на главную страницу",
+  "core.NoJs.IN_YOUR_BROWSER": "В вашем браузере отключен JavaScript",
+  "core.NoJs.FOR_WATCHING": "Для просмотра данного сайта",
+  "core.NoJs.HOW": "Как включить JavaScript ?",
+  "core.NoJs.ON": "включите",
+  "core.OutdatedBrowser.HEADER": "Ваш браузер не поддерживается",
+  "core.OutdatedBrowser.DOWNLOAD": "скачать",
+  "core.OutdatedBrowser.AVAILABLE": "доступно для"
+}

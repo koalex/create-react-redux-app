@@ -1,18 +1,40 @@
 {
   "name": "react-redux-starter",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "proxy": "https://localhost:443",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "dev": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "postbuild": "node scripts/gzipBuildFiles.js && node scripts/puppeteer.js",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "check-updates": "ncu",
+    "check-updates:upgrade": "ncu -u"
+  },
   "dependencies": {
+    "@quentin-sommer/react-useragent": "^3.1.0",
+    "connected-react-router": "^6.6.1",
+    "file-saver": "^2.0.2",
+    "fingerprintjs2": "^2.1.0",
+    "history": "^4.10.1",
+    "hoist-non-react-statics": "^3.3.1",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-helmet": "^5.2.1",
+    "react-intl": "^3.9.2",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.3",
+    "reselect": "^4.0.0",
+    "socket.io-client": "^2.3.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "license": "SEE LICENSE IN LICENSE file",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -27,5 +49,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "chokidar": "^3.3.1",
+    "customize-cra": "^0.9.1",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "favicons-webpack-plugin": "^1.0.2",
+    "glob": "^7.1.6",
+    "glog": "^1.7.0",
+    "node-zopfli": "^2.1.3",
+    "npm-check-updates": "^4.0.1",
+    "prettier": "^1.19.1",
+    "puppeteer": "^2.0.0",
+    "react-app-rewired": "^2.1.5",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-dock-monitor": "^1.1.3",
+    "redux-devtools-log-monitor": "^1.4.0",
+    "rimraf": "^3.0.0",
+    "serve-handler": "^6.1.2"
   }
 }

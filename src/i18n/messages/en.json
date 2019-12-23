@@ -1,0 +1,11 @@
+{
+  "core.404.NotFound": "Not found",
+  "core.404.GoHome": "home page",
+  "core.NoJs.IN_YOUR_BROWSER": "JavaScript is disabled in your browser",
+  "core.NoJs.FOR_WATCHING": "To view this site",
+  "core.NoJs.HOW": "How to enable JavaScript ?",
+  "core.NoJs.ON": "enable",
+  "core.OutdatedBrowser.HEADER": "Your browser is not supported",
+  "core.OutdatedBrowser.DOWNLOAD": "download",
+  "core.OutdatedBrowser.AVAILABLE": "available on"
+}

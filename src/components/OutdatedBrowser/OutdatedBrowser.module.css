@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+.outdatedbrowser.table ~ * {
+  display: none !important;
+}
+
+.outdatedbrowser.table {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.outdatedbrowser.table td {
+  width: 33.333333%;
+  text-align: center;
+  color: #fff;
+  vertical-align: bottom;
+  box-shadow: none;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.outdatedbrowser .outdatedbrowser__header {
+  width: auto;
+  height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle !important;
+  background-color: #000;
+  box-shadow: none !important;
+}
+
+.outdatedbrowser.table td .browser-img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url('../../assets/img/outdatedbrowsers_edge.png');
+  background-position-x: -999999px;
+  background-position-y: 0;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-size: auto 200px;
+}
+
+.outdatedbrowser.table.ltew8 td .browser-img {
+  background-image: url('../../assets/img/outdatedbrowsers_ie.png');
+}
+
+.outdatedbrowser .browser-name {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.outdatedbrowser.table td .under {
+  position: relative;
+  font-weight: bold;
+  height: 50px;
+}
+
+.outdatedbrowser.table td .under p {
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.outdatedbrowser.table td .under-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+.outdatedbrowser .download {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 15%;
+  width: 125px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 3px solid #fff;
+  border-radius: 30px;
+}
+
+.outdatedbrowser .download:hover {
+  background-color: #fff;
+}
+
+.outdatedbrowser td.chrome {
+  background: #f2b635;
+}
+
+.outdatedbrowser td.chrome:hover {
+  box-shadow: inset 0 0 200px #c0870c;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.outdatedbrowser.table td.chrome .download:hover {
+  color: #f2b635;
+}
+
+.outdatedbrowser.table td.chrome .browser-img {
+  background-position-x: 0;
+}
+
+.outdatedbrowser td.firefox {
+  background: #f19a2a;
+}
+
+.outdatedbrowser td.firefox:hover {
+  box-shadow: inset 0 0 200px #bf710d;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.outdatedbrowser.table td.firefox .download:hover {
+  color: #f19a2a;
+}
+
+.outdatedbrowser.table td.firefox .browser-img {
+  background-position-x: -100px;
+}
+
+.outdatedbrowser.table td.edge {
+  background: #00caff;
+}
+
+.outdatedbrowser.table td.edge:hover {
+  box-shadow: inset 0 0 200px #008db3;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.outdatedbrowser.table td.edge .download:hover {
+  color: #00caff;
+}
+
+.outdatedbrowser.table td.edge .browser-img {
+  background-position-x: -200px;
+}
+
+.outdatedbrowser.table td.safari {
+  background: #00a0e6;
+}
+
+.outdatedbrowser.table td.safari:hover {
+  box-shadow: inset 0 0 200px #007cb3;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.outdatedbrowser.table td.safari .download:hover {
+  color: #00a0e6;
+}
+
+.outdatedbrowser.table td.safari .browser-img {
+  background-position-x: -300px;
+}
+
+.outdatedbrowser.table td.yandex {
+  background: #ff4b3b;
+}
+
+.outdatedbrowser.table td.yandex:hover {
+  box-shadow: inset 0 0 200px #b30f00;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.table td.yandex .download:hover {
+  color: #ff4b3b;
+}
+
+.outdatedbrowser.table td.yandex .browser-img {
+  background-position-x: -500px;
+}
+
+.table td.opera {
+  background: #e76054;
+}
+
+.table td.opera:hover {
+  box-shadow: inset 0 0 200px #9c2116;
+  transition: box-shadow 0.3s linear 0s;
+}
+
+.table td.opera .download:hover {
+  color: #e76054;
+}
+
+.table td.opera .browser-img {
+  background-position-x: -400px;
+}
+
+.systems-list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.systems-list-item {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.systems-list-item>i {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../../assets/img/outdatedbrowsers_systems.png");
+  background-position-x: -999999px;
+  background-position-y: 0;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-size: auto 25px;
+}
+
+.systems-list-item>i.windows {
+  background-position-x: 0;
+}
+
+.systems-list-item>i.apple {
+  background-position-x: -25px;
+}
+
+.systems-list-item>i.linux {
+  background-position-x: -50px;
+}
+
+.table td:hover .browser-img {
+  background-position-y: -100px;
+}
+.table td.safari:hover .browser-img {
+  background-position-y: -99px;
+}

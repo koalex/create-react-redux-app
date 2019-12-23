@@ -1,12 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React               from 'react';
+import { render, hydrate } from 'react-dom';
+import App                 from './App';
+import * as serviceWorker  from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+if (rootElement.hasChildNodes()) {
+	hydrate(<App />, rootElement);
+} else {
+	render(<App />, rootElement);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+/*
+* для полноценного hot-reloading-а без перезагрузки страницы:
+* https://blog.logrocket.com/setup-react-hotloader-in-10-minutes-3175dfdbf38a/
+* https://daveceddia.com/hot-reloading-create-react-app/
+* */

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.no-js {
+  display: block;
+  min-height: 100vh;
+  background: url('../../assets/img/js.jpg') 0 0 no-repeat;
+  background-size: cover;
+}
+.no-js > p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  font-family: Helvetica, 'Roboto Light', Tahoma, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+}
+
+.no-js > p > a {
+  color: #fff;
+  text-decoration: underline;
+}
