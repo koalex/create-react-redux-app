@@ -3,8 +3,6 @@ import { routerMiddleware }                      from 'connected-react-router';
 import createSagaMiddleware                      from 'redux-saga';
 import createReducer                             from '../reducer';
 import history                                   from '../middlewares/history';
-import api                                       from '../middlewares/api';
-import fingerprint                               from '../middlewares/fingerprint';
 import {
     middlewares as modulesMiddlewares,
     rootSaga
@@ -19,8 +17,6 @@ export default function (preloadedState = {}) {
         sagaMiddleware,
         ...modulesMiddlewares,
         routerMiddleware(history),
-        fingerprint,
-        api
     ];
 
     let enhancer = applyMiddleware(...middlewares);

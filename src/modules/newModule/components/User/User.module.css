@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.container {
+    text-align: center;
+}
+.form {
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    border: 2px solid red;
+}
