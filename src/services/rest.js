@@ -7,6 +7,7 @@ const API_ROOT = '/api/v1';
 const defaultHeaders = {
 	'Content-Type': 'application/json',
 	'Accept': 'application/json',
+	'X-Requested-With': 'XMLHttpRequest',
 	// Host: 'https://localhost:8080',
 };
 const isGET = method => {
@@ -14,7 +15,7 @@ const isGET = method => {
 	return method.toUpperCase().trim() === 'GET';
 };
 
-export default async function callApi (opts, schema) {
+export default async function callRest (opts) {
 	const { endpoint, method, body } = opts;
 	const fullUrl     = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint;
 	const fingerprint = await getFingerPrint();
