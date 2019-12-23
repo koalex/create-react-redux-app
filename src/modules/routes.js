@@ -1,5 +1,4 @@
-import React from 'react';
-import User  from 'modules/newModule/components/User/container';
+import User from 'modules/newModule/components/User/container';
 
 const routes = [
 	{

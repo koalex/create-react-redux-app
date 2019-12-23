@@ -6,7 +6,11 @@ const globSync  = require('glob')['sync'];
 const handler   = require('serve-handler');
 const rimraf    = require('rimraf');
 
-const urls              = ['/'];
+const urls = [
+	'/',
+	'/__example__'
+];
+
 const createScreenshots = true;
 const PORT              = 5050;
 const origin            = 'http://localhost:' + PORT;
@@ -20,11 +24,13 @@ rimraf['sync'](snapshotsPath);
 fs.mkdirSync(snapshotsPath);
 createScreenshots && locales.forEach(locale => fs.mkdirSync(path.join(snapshotsPath, locale)));
 
-const server = http.createServer((request, response) => (
+const rewrites = urls.map(url => ({source: url, destination: '/index.html'}));
+const server = http.createServer((request, response) => {
 	handler(request, response, {
-		public: path.join(__dirname, '../build')
+		public: path.join(__dirname, '../build'),
+		rewrites
 	})
-));
+});
 
 server.listen(PORT, start);
 
@@ -53,7 +59,10 @@ async function start () {
 				const pageContent = await page.content();
 				snapshotObject[url][locale] = pageContent;
 				if (createScreenshots) {
-					await page.screenshot({path: path.join(snapshotsPath, locale, screenShotCounter + '_' + locale + '.png') });
+					await page.screenshot({
+						path: path.join(snapshotsPath, locale, screenShotCounter + '_' + locale + '.png'),
+						fullPage: true
+					});
 				}
 			}
 			++screenShotCounter;
