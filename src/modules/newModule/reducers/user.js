@@ -2,7 +2,8 @@ import * as AT from '../actionTypes';
 
 export const init = {
 	user: null,
-	isLoading: false
+	isLoading: false,
+	error: null
 };
 
 export default function (state = init, action) {
@@ -16,6 +17,7 @@ export default function (state = init, action) {
 			return {
 				...state,
 				isLoading: true,
+				error: null
 			};
 
 		case AT.LOAD_USER_SUCCESS:
@@ -28,6 +30,7 @@ export default function (state = init, action) {
 			return {
 				...state,
 				isLoading: false,
+				error: payload
 			};
 	}
 }

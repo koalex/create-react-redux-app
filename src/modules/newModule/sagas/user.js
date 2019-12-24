@@ -9,9 +9,9 @@ function* fetchUser (/*action*/) {
 			method: 'GET',
 		});
 
-		yield put({type: AT.LOAD_USER_SUCCESS, user: user});
+		yield put({type: AT.LOAD_USER_SUCCESS, payload: user});
 	} catch (err) {
-		yield put({type: AT.LOAD_USER_ERROR, message: ('string' === typeof err) ? err : err.message});
+		yield put({type: AT.LOAD_USER_ERROR, payload: ('string' === typeof err) ? err : err.message});
 	}
 }
 
