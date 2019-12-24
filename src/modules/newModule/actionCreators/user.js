@@ -8,3 +8,12 @@ export function loadUser (userId) {
 		}
 	}
 }
+export function saveUser (user) {
+	return {
+		type: AT.SAVE_USER,
+		method: 'user.save',
+		params: {
+			...user
+		}
+	}
+}
